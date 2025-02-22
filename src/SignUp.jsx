@@ -21,27 +21,24 @@ export default function SignUp() {
             setPass(value);
         }
     }
-    const isValidEmail = (email) => {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      };
     
     let handelSignUp = async(event)=> {
         event.preventDefault();
         console.log(`email is  ${email}`);
         console.log(`password is  ${pass}`);
-        if(isValidEmail(email)) {
-            alert("Account already exists");
-            setEmail("");
-            setPass("");
-            return;
-          }
         try {
             await createUserWithEmailAndPassword(auth, email, pass);
             navigate("/");
-        } catch (err) {
-            alert("Someting went wrong")
-        };
-    }
+            setEmail("");
+            setPass("");
+        } catch (error) {
+            if (error.code === "auth/email-already-in-use") {
+                alert("This email is already registered. Please log in.");
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        }
+    };
 
 
 
