@@ -1,0 +1,90 @@
+.logoInfo1{
+    margin: 1rem;
+    display: flex;
+    width: 55vw;
+    margin-bottom: 100px;
+    justify-content: end;
+}
+.logoInfo1 img {
+    height: 4rem;
+    width: 4rem;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.todoNameBox {
+    margin-left: 10px;
+}
+
+.signUp {
+    display: flex;
+    overflow: hidden;
+}
+
+.s-box1 {
+    height: 100vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.s-box {
+    height: 100vh;
+    width: 40vw;
+
+}
+
+.s-signUpButton {
+    border: none;
+    height: 5rem;
+    border-radius: 4px;
+    background-color: #c971eb;
+    color: white;
+}
+
+.s-signUpButton:hover {
+    background-color: #6b3e99;
+    cursor: pointer;
+}
+.s-logIn {
+    display: flex;
+}
+#s-logInButton {
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    margin: 15px 0px 15px 0px;
+}
+#s-logInButton:hover {
+    cursor: pointer;
+    color: blueviolet;
+}
+
+.s-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 600px) {
+    .s-box{
+        display: none;
+    }
+    .s-box1 {
+        width: 85%;
+    }
+    .signUp {
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .logoInfo1 {
+        width: 100%;
+        justify-content: center;
+    }
+    .formBox {
+        width: 80%;
+    }
+}

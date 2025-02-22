@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    background-color: #c971eb;
+    display: flex;
+}
+#userName {
+    width: 20px;
+}
+.todoPage {
+    display: flex;
+    overflow: hidden;
+}
+
+.navBar{
+    height: 100vh;
+    width: 18vw;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #c971eb;
+    color: white;
+    padding-left: 5px;
+    
+}
+
+.projects{
+    width: 10px;
+    height: auto;
+    background-color: blue;
+}
+.userBox {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    width: 75%;
+    border-radius: 14px;
+    background-color: #c971eb;
+    border: 1.5px solid black;
+    overflow: hidden;
+}
+#icon {
+    font-size: 1.5rem;
+    background-color: #c971eb;
+    margin-right: 5px;
+}
+.addProject {
+    width: 16vw;
+    height: 2rem;
+    display: flex;
+    border-radius: 4px;
+    justify-content: space-between;
+    align-items: center;
+}
+#addIcon {
+    font-size: 1.7rem;
+    color: black;
+    padding-right: 5px;
+}
+
+#addIcon:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+#inpName {
+    height: 90%;
+    width: 80%;
+    border: none;
+    margin-left: 5px;
+}
+
+#inpName:focus {
+    outline: none;
+}
+.todo {
+    height: 100vh;
+    width: 82vw;
+    min-width: 400px;
+}
+
+.appLogo {
+    height: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 15px;
+}
+
+.appLogo img {
+    height: 4rem;
+    width: 4rem;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.list {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+}
+.addTaskBox {
+    height: 80%;
+    width: 80%;
+    margin-top: 10px;
+}
+
+#ln {
+    background-color: white;
+}
+.addBox {
+    height: 5%;
+    width: 25%;
+    margin-top: 10px;
+    border: 2px solid #c971eb;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.addTask {
+    height: 94%;
+    border: none;
+    width: 80%;
+    margin-left: 5px;
+    border-radius: 4px;
+    
+}
+.addTask {
+    outline: none;
+}
+
+.todoList {
+    height: auto;
+    width: auto;
+}
+.tasks {
+    margin: 20px 0 0 0;
+}
+.displayProjects {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+    background-color: #c971eb;
+}
+
+.lists {
+    
+    background-color: #c971eb;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+}
+
+.addT:hover {
+    cursor: pointer;
+}
+
+.listItem {
+    background-color: #c971eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    font-size: 1.2rem;
+}
+
+.deleteIcon ,.editIcon {
+    display: none;
+    color: black;
+    cursor: pointer;
+    background-color: #c971eb;
+}
+.listIcons {
+    display: flex;
+    width: 45px;
+    background-color: #c971eb;
+    justify-content: space-between;
+}
+.listItem:hover .deleteIcon {
+    display: inline;
+    font-size: 1rem;
+}
+.listItem:hover .editIcon {
+    display: inline;
+    font-size: 1rem;
+}
+
+.tasks li {
+    position: relative;
+    padding: 5px;
+}
+.deleteTaskIcon {
+    cursor: pointer;
+    margin-left: 20px;
+    display: none;
+}
+.tasks li:hover .deleteTaskIcon {
+    display: inline;
+}
+.pro {
+    background-color: #c971eb;
+    height: auto;
+    width: 18vw;
+    padding: 15px;
+}
+.completedTask {
+    text-decoration: line-through;
+    color: gray;
+    margin-left: 20px;
+}
+.incomp{
+    margin-left: 25px;
+}
+
+input[type = "checkbox" ] {
+    accent-color: green;
+}
+
+@media (max-width: 600px) {
+    .todoPage {
+        flex-direction: column;
+    }
+    .userBox {
+        display: none;
+    }
+
+    .navBar {
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+        text-align: center;
+    }
+    #hedd {
+        width: 100%;
+    }
+
+    .addProject {
+        width: 80%;
+    }
+
+    .displayProjects {
+        max-height: none;
+    }
+
+    .listIcons {
+        justify-content: center;
+    }
+
+    .todo {
+        padding: 10px;
+        width: 100%;
+    }
+    .pro {
+        width: 100%;
+    }
+    .lists {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow-y: auto;
+    }
+    .appLogo {
+        justify-content: center;
+        margin-right: 45px;
+    }
+    .addBox {
+        width: 60%;
+    }
+}
