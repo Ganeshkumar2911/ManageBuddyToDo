@@ -99,6 +99,7 @@ export default function SignUp() {
                                 id="password"
                                 label="Password"
                                 type="password"
+                                minLength={6}
                                 autoComplete="off"
                                 InputLabelProps={{
                                     sx: {

@@ -122,6 +122,7 @@ export default function LogIn({setUserEmail}) {
                                 style={{width: "100%", fontFamily: "Cutive mono"}}
                                 id="password"
                                 type="password"
+                                minLength={6}
                                 autoComplete="current-password"
                                 required
                                 InputLabelProps={{
